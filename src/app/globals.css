@@ -50,6 +50,7 @@ body {
   --font-sans: var(--font-geist-sans); 
   --color-secondary: var(--secondary); 
   --color-red: var(--red); 
+  --color-yellow: var(--yellow); 
   --font-mono: var(--font-geist-mono);
 }
 
