@@ -1,14 +1,20 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --black: #231f1e;
+  --secondary: #0cc7ce;
+  --red: #e51721;
+
+
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-black: var(--black);
+  --font-sans: var(--font-geist-sans); 
+  --color-secondary: var(--secondary); 
+  --color-red: var(--red); 
   --font-mono: var(--font-geist-mono);
 }
 
@@ -21,6 +27,142 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--black);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --black: #231f1e;
+  --secondary: #0cc7ce;
+  --red: #e51721;
+  --font-bengali: var(--font-hind-siliguri);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-black: var(--black);
+  --font-sans: var(--font-geist-sans); 
+  --color-secondary: var(--secondary); 
+  --color-red: var(--red); 
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--black);
+  font-family: var(--font-hind-siliguri), Arial, Helvetica, sans-serif;
+}
+
+.bengali-text {
+  font-family: var(--font-hind-siliguri), sans-serif;
+}
+
+
+
+/* -------container size------------- */
+.container-sk {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+@media (min-width: 768px) {
+  .container-sk {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-sk {
+    width: 960px;
+  }
+  
+}
+@media (min-width: 1200px) {
+  .container-sk {
+    /* width: 1140px; */
+    width: 1220px;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .container-sk {
+    width: 1320px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .container-sk {
+    width: 1550px;
+  }
+}
+
+/* ripple effect  */
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+/* ripple effect classes end  */
+
+/* map */
+.responsive-map{
+  overflow: hidden;
+  padding-bottom:0%;
+  position:relative;
+  height: 600px;
+  
+  }
+  .responsive-map iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
+
+
+.common-bg{
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #F1B209;
+  
 }
