@@ -9,7 +9,7 @@ export default function Button({ children, variant = 'primary', onClick, classNa
   
   return (
     <button 
-      className={`${variants[variant]} text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-200 cursor-pointer ${className}`}
+      className={`${variants[variant]} text-white px-6 py-2.5 rounded-full font-medium transition-all duration-200 cursor-pointer ${className}`}
       onClick={onClick}
     >
       {children}
