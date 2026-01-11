@@ -34,8 +34,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${hindSiliguri.variable} antialiased`}
       >
         <Navbar/>
-        {children}
-
+        {/* {children} */}
+ <div className="pt-[72px]"> {/* Navbar এর height অনুযায়ী adjust করুন */}
+          {children}
+        </div>
         <Footer/>
         <ToastContainer
           autoClose={2000}

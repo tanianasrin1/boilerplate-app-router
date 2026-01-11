@@ -21,12 +21,7 @@ const Hero = () => {
             title: 'তাজা ও স্বাস্থ্যকর খাবার',
             subtitle: 'প্রতিদিন তাজা উপাদান দিয়ে তৈরি',
         },
-        {
-            id: 3,
-            image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=1920&q=80',
-            title: 'দ্রুত ডেলিভারি সেবা',
-            subtitle: 'মাত্র ৩০ মিনিটে আপনার খাবার পৌঁছে যাবে',
-        },
+       
     ];
 
     return (
@@ -68,11 +63,11 @@ const Hero = () => {
                                     <p className="text-lg md:text-xl lg:text-2xl opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
                                         {slide.subtitle}
                                     </p>
-                                    <div className="opacity-0 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]">
+                                    {/* <div className="opacity-0 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]">
                                         <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                                             অর্ডার করুন
                                         </button>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
