@@ -37,9 +37,11 @@ body {
 :root {
   --background: #ffffff;
   --black: #231f1e;
-  --secondary: #0cc7ce;
+  --secondary: #47983f;
   --red: #e51721;
+  --yellow: #f5a860;
   --font-bengali: var(--font-hind-siliguri);
+  /* #f28621 */
 }
 
 @theme inline {
