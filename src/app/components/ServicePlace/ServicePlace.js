@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useWindowSize from "@/hooks/useWindowSize";
-// import useWindowSize from "@/hooks/useWindowSize";
 
 const ServicePlace = () => {
   const windowSize = useWindowSize();

@@ -1,5 +1,6 @@
 import Experience from "./components/Experience/Experience";
 import Hero from "./components/Hero/Hero";
+import Menu from "./components/Menu/Menu";
 import ServicePlace from "./components/ServicePlace/ServicePlace";
 import WhatWeDo from "./components/WhatWeDo/WhatWeDo";
 
@@ -14,6 +15,7 @@ export default function Home() {
      <ServicePlace/>
     <WhatWeDo/>
     <Experience/>
+    <Menu/>
    
   </div>
 
