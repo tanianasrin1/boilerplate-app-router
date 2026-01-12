@@ -1,160 +1,101 @@
-// "use client"
-// import React from 'react';
-// import { PhotoProvider, PhotoView } from "react-photo-view";
-// import "react-photo-view/dist/react-photo-view.css";
-
-// const WhatWeDo = () => {
-//     const galleryImages = [
-//         {
-//             id: 1,
-//             src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
-//             title: "Team Collaboration"
-//         },
-//         {
-//             id: 2,
-//             src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
-//             title: "Strategic Planning"
-//         },
-//         {
-//             id: 3,
-//             src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
-//             title: "Creative Workspace"
-//         },
-//         {
-//             id: 4,
-//             src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80",
-//             title: "Innovation & Growth"
-//         },
-//         {
-//             id: 5,
-//             src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
-//             title: "Business Meeting"
-//         },
-//         {
-//             id: 6,
-//             src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
-//             title: "Team Success"
-//         }
-//     ];
-
-//     return (
-//         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-16 px-4">
-//             <div className="container-sk">
-//                 <div className="text-center mb-12">
-//                     <h1 className="text-5xl font-bold text-slate-800 mb-4">What We Do</h1>
-//                     <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-//                         Explore our work through these moments captured in our journey
-//                     </p>
-//                 </div>
-
-//                 <PhotoProvider>
-//                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//                         {galleryImages.map((image) => (
-//                             <PhotoView key={image.id} src={image.src}>
-//                                 <div className="group cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105">
-//                                     <div className="relative aspect-square">
-//                                         <img
-//                                             src={image.src}
-//                                             alt={image.title}
-//                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-//                                         />
-//                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-//                                             <div className="absolute bottom-0 left-0 right-0 p-4">
-//                                                 <h3 className="text-white text-lg font-semibold">
-//                                                     {image.title}
-//                                                 </h3>
-//                                             </div>
-//                                         </div>
-//                                     </div>
-//                                 </div>
-//                             </PhotoView>
-//                         ))}
-//                     </div>
-//                 </PhotoProvider>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default WhatWeDo;  
-
-
-"use client"
-import React from 'react';
+"use client";
+import Image from "next/image";
+import React from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 
-const WhatWeDo = () => {
-    const galleryImages = [
-        {
-            id: 1,
-            src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
-            title: "টিম সহযোগিতা"
-        },
-        {
-            id: 2,
-            src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
-            title: "কৌশলগত পরিকল্পনা"
-        },
-        {
-            id: 3,
-            src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
-            title: "সৃজনশীল কর্মক্ষেত্র"
-        },
-        {
-            id: 4,
-            src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80",
-            title: "উদ্ভাবন ও উন্নয়ন"
-        },
-        {
-            id: 5,
-            src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
-            title: "ব্যবসায়িক সভা"
-        },
-        {
-            id: 6,
-            src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
-            title: "টিম সাফল্য"
-        }
-    ];
+const GalleryContent = () => {
+  return (
+    <>
+      <section className="lg:py-16 py-10 container-sk arrow_no_margin ">
+        <p className=" lg:text-4xl md:text-3xl text-2xl font-semibold lg:mt-8 mt-5 text-center">
+          আমাদের সেবাসমূহ
+        </p>
+        <p className="lg:w-7/12 mx-auto text-gray-400  mt-3 tracking-wide lg:text-xl md:text-xl text-lg">
+         যেখানে প্রতিটি আয়োজন মানেই স্বাদের উৎসব, আর প্রতিটি পদ তৈরি হয় যত্ন আর ভালোবাসায়
+        </p>
 
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-16 px-4">
-            <div className="container-sk">
-                <div className="text-center mb-12">
-                    <h1 className="text-5xl font-bold text-slate-800 mb-4">আমরা যা করি</h1>
-                    <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                        আমাদের যাত্রায় ধারণ করা এই মুহূর্তগুলোর মাধ্যমে আমাদের কাজ অন্বেষণ করুন
-                    </p>
-                </div>
-
-                <PhotoProvider>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {galleryImages.map((image) => (
-                            <PhotoView key={image.id} src={image.src}>
-                                <div className="group cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                                    <div className="relative aspect-square">
-                                        <img
-                                            src={image.src}
-                                            alt={image.title}
-                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <div className="absolute bottom-0 left-0 right-0 p-4">
-                                                <h3 className="text-white text-lg font-semibold">
-                                                    {image.title}
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </PhotoView>
-                        ))}
-                    </div>
-                </PhotoProvider>
+        <div className="mt-10 lg:mt-10">
+          <PhotoProvider>
+            <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-y-8">
+              <PhotoView src="/images/card.png">
+                <Image
+                  src="/images/card.png"
+                  alt=""
+                  width={370}
+                  height={261}
+                  className="cursor-pointer hover:scale-105 duration-300 object-cover"
+                />
+              </PhotoView>
+              <PhotoView src="/images/card.png">
+                <Image
+                  src="/images/card.png"
+                  alt=""
+                  width={370}
+                  height={261}
+                  className="cursor-pointer hover:scale-105 duration-300 object-cover"
+                />
+              </PhotoView>
+              <PhotoView src="/images/card.png">
+                <Image
+                  src="/images/card.png"
+                  alt=""
+                  width={370}
+                  height={261}
+                  className="cursor-pointer hover:scale-105 duration-300 object-cover"
+                />
+              </PhotoView>
+              <PhotoView src="/images/card.png">
+                <Image
+                  src="/images/card.png"
+                  alt=""
+                  width={370}
+                  height={261}
+                  className="cursor-pointer hover:scale-105 duration-300 object-cover"
+                />
+              </PhotoView>
+              <PhotoView src="/images/card.png">
+                <Image
+                  src="/images/card.png"
+                  alt=""
+                  width={370}
+                  height={261}
+                  className="cursor-pointer hover:scale-105 duration-300 object-cover"
+                />
+              </PhotoView>
+              <PhotoView src="/images/card.png">
+                <Image
+                  src="/images/card.png"
+                  alt=""
+                  width={370}
+                  height={261}
+                  className="cursor-pointer hover:scale-105 duration-300 object-cover"
+                />
+              </PhotoView>
             </div>
+          </PhotoProvider>
         </div>
-    );
+      </section>
+    </>
+  );
 };
 
-export default WhatWeDo;
+export default GalleryContent;
+
+
+  {/* {gallery?.gallery_item.map(
+                        (item, index) =>
+                          item?.title.includes("gallery_item_") && (
+                            <>
+                              <PhotoView  src={item?.contents?.image}>
+                                <Image
+                                 src={item?.contents?.image}
+                                  alt=""
+                                  width={550}
+                                  height={550}
+                                  className="cursor-pointer hover:scale-105 duration-300 lg:h-60 md:h-44 h-40 object-cover "
+                                />
+                              </PhotoView>
+                            </>
+                          )
+                      )} */}
