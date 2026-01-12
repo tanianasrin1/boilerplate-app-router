@@ -7,11 +7,12 @@ import "react-photo-view/dist/react-photo-view.css";
 const GalleryContent = () => {
   return (
     <>
-      <section className="lg:py-16 py-10 container-sk arrow_no_margin ">
+     <div className="bg-[#fcf7f4]">
+         <section className="lg:py-16 py-10 container-sk arrow_no_margin ">
         <p className=" lg:text-4xl md:text-3xl text-2xl font-semibold lg:mt-8 mt-5 text-center">
-          আমাদের সেবাসমূহ
+          আমাদের <span className="text-red">সেবাসমূহ</span>
         </p>
-        <p className="lg:w-7/12 mx-auto text-gray-400  mt-3 tracking-wide lg:text-xl md:text-xl text-lg">
+        <p className="lg:w-1/2 w-full  mx-auto text-center text-gray-500  lg:mt-5 mt-3 tracking-wide lg:text-xl md:text-xl text-lg">
          যেখানে প্রতিটি আয়োজন মানেই স্বাদের উৎসব, আর প্রতিটি পদ তৈরি হয় যত্ন আর ভালোবাসায়
         </p>
 
@@ -76,6 +77,7 @@ const GalleryContent = () => {
           </PhotoProvider>
         </div>
       </section>
+     </div>
     </>
   );
 };
